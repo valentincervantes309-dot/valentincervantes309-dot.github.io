@@ -1,0 +1,101 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: Verdana;
+    font-size:20px;
+}
+body{
+     background: #ffffff;
+}
+
+.Menu{
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 85px;
+    padding: 5px 10%;
+
+}
+    
+.Menu .logo{
+    cursor: pointer;
+}
+.Menu .logo img{
+    height:70px;
+    width:auto;
+    transition: all 0.3s;
+}
+.Menu .logo img:hover{
+    transform:scale(1.2);
+}
+.Menu .Secciones{
+    list-style:none;
+}
+.Menu .Secciones li{
+   display:inline-block;
+   padding:0 20px;
+}
+.Menu .Secciones li:hover{
+    transform: scale(1.1);
+}
+.Menu .Secciones a{
+    font-size:700;
+    color:white;
+    text-decoration:none;
+    
+}
+.Menu .Secciones a:hover{
+   color:rgb(66, 248, 66);
+}
+.Menu .btn button{
+    font-weight: 700;
+    color:black;
+    padding: 9px 25px;
+    border:none;
+    border-radius: 50px;
+    transition:all 0.3s ease 0s;
+}
+.Menu .btn button:hover{
+    background-color: rgb(242, 241, 241);
+    transform: scale(1.1);
+}
+
+
+form{
+    margin-left: 450px;
+    background-color: white;
+    margin-top: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    padding: 45px;
+    box-shadow: 0 0 20px rgba(16, 124, 16);
+}
+h1{
+    margin-top: -10px;
+    margin-bottom: 20px;
+
+}
+input{
+    background-color: #f1f1f1;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 25px;
+    outline: none;
+}
+.Boton{
+    background-color: rgb(16, 124, 16);
+    color:white;
+    padding: 15px 111px;
+    cursor:pointer;
+}
+.Boton:hover{
+    opacity: 0.40;
+    transition: opacity 1.5s;
+}
