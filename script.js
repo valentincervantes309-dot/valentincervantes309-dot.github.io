@@ -63,18 +63,22 @@ function guardarYMostrar() {
 
 
 */
-
-function enviarSolicitud() {
-    // Si la red se cayó o está en Offline
+function enviarSolicitud(event) {
+    // Si no hay red al intentar enviar la solicitud
     if (!navigator.onLine) {
         
+        // 1. Limpiamos los datos del estado para simular que el sistema no guardó nada
+        if (typeof carrito !== 'undefined') carrito = [];
+        localStorage.removeItem('carritoGuardado');
+
+        // 2. Forzamos la navegación real hacia la misma ruta del servidor/repositorio.
+        // Al estar Offline, el navegador no podrá establecer el apretón de manos (handshake) 
+        // con el servidor del repositorio y desplegará la pantalla nativa de error.
+        window.location.href = window.location.pathname + '?reload=' + Date.now();
         
-        // 2. Forzamos un reenvío de formulario o recarga de la página hacia el servidor
-        // Al intentar conectarse sin internet, Chrome interrumpe la carga y despliega su pantalla nativa de error.
-        window.location.href = window.location.href + '?solicitud=' + Date.now();
-        return;
+        return false;
     }
 
-    // Si hay internet, la solicitud continúa
-    alert('✅ Solicitud enviada correctamente');
+    // Si SÍ hay internet, la solicitud continúa normalmente
+    alert('✅ Solicitud enviada correctamente al servidor.');
 }
