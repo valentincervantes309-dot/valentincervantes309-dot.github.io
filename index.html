@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="productos">
+        
+        <div class="card-producto">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300" alt="Laptop">
+            <h3>Laptop</h3>
+            <p class="precio">$1,000</p>
+            <button onclick="agregarProducto('Laptop', 1000)">Agregar</button>
+        </div>
+
+        
+        <div class="card-producto">
+            <img src="https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=300" alt="Xbox">
+            <h3>Xbox</h3>
+            <p class="precio">$7,000</p>
+            <button onclick="agregarProducto('Xbox', 7000)">Agregar</button>
+        </div>
+
+        
+        <div class="card-producto">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300" alt="Celular">
+            <h3>Celular</h3>
+            <p class="precio">$2,000</p>
+            <button onclick="agregarProducto('Celular', 2000)">Agregar</button>
+        </div>
+    </div>
+
+    <ul id="lista"></ul>
+
+    <p>Total: $<span id="total">0</span></p>
+
+    
+    <button onclick="enviarSolicitud()"> Comprar</button>
+    <script src="script.js"></script>
+</body>
+</html>
