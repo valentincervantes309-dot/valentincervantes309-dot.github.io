@@ -79,6 +79,35 @@ body {
     background-color: #2980b9;
 }
 
+/* BOTÓN DENTRO DE LA TARJETA */
+.Envio {
+    margin-top: 1.5rem; /* Margen para separarlo del total */
+    width: 100%;        /* Asegura que el contenedor abarque todo el ancho */
+}
+
+   
+.Envio button {
+    display: block;     /* Permite centrarlo con margin auto */
+    margin: 0 auto;     /* Centra el botón horizontalmente */
+
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.Envio button:hover {
+    background-color: #2980b9;
+}
+
+
+
+
 /* ESTILOS PARA LA LISTA DEL CARRITO Y TOTAL */
 #lista {
     list-style: none;
